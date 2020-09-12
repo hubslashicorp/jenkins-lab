@@ -16,7 +16,7 @@ pipeline {
                     retry(2) {
                         script {
                             try {
-                                sh 'script-directory/script-one.sh'
+                                sh './script-directory/script-one.sh'
                                 echo 'Script executado com sucesso...'
                             }
                             catch (err) {
@@ -34,7 +34,7 @@ pipeline {
                     retry(2) {
                         script {
                             try {
-                                sh 'script-directory/script-two.sh'
+                                sh './script-directory/script-two.sh'
                                 echo 'Script executado com sucesso...'
                             } catch (err) {
                                 echo 'Não foi possível realizar a copia...'
@@ -51,7 +51,7 @@ pipeline {
                     retry(2) {
                         script {
                             try {
-                                sh 'script-directory/script-three.sh'
+                                sh './script-directory/script-three.sh'
                                 echo 'Script executado com sucesso...'
                             } catch (err) {
                                 echo 'Não foi possível realizar a copia...'

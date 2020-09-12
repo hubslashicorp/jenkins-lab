@@ -1,6 +1,7 @@
 #!groovy
 
 pipeline {
+
     agent { label 'swarm-docker-slave' }
 
     environment {
@@ -9,7 +10,7 @@ pipeline {
         GIT_COMMIT_HASH = sh (script: "git log -n 1 --pretty=format:'%H'", returnStdout: true)
     }
 
-    stage('Script 1') {
+    stage('script-1') {
         steps {
             dir('app') {
                 retry(2) {
@@ -27,8 +28,7 @@ pipeline {
             }
         }
     }
-
-    stage('Script 2') {
+    stage('script-2') {
         steps {
             dir('app') {
                 retry(2) {
@@ -45,8 +45,7 @@ pipeline {
             }
         }
     }
-
-    stage('Script 3') {
+    stage('script-3') {
         steps {
             dir('app') {
                 retry(2) {

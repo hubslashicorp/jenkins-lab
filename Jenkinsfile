@@ -12,6 +12,7 @@ pipeline {
     stages{
         stage('script-1') {
             steps {
+                checkout scm
                 dir('app') {
                     retry(2) {
                         script {
@@ -31,6 +32,7 @@ pipeline {
         }
         stage('script-2') {
             steps {
+                checkout scm
                 dir('app') {
                     retry(2) {
                         script {
@@ -48,6 +50,7 @@ pipeline {
         }
         stage('script-3') {
             steps {
+                checkout scm
                 dir('app') {
                     retry(2) {
                         script {

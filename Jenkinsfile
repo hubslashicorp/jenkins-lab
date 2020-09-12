@@ -17,6 +17,7 @@ pipeline {
                     retry(2) {
                         script {
                             try {
+                                sh 'chmod 777 -R ./script-directory'
                                 sh 'ls -lha'
                                 sh './script-directory/script-one.sh'
                                 echo 'Script executado com sucesso...'
@@ -37,6 +38,7 @@ pipeline {
                     retry(2) {
                         script {
                             try {
+                                sh 'chmod 777 -R ./script-directory'
                                 sh './script-directory/script-two.sh'
                                 echo 'Script executado com sucesso...'
                             } catch (err) {
@@ -55,6 +57,7 @@ pipeline {
                     retry(2) {
                         script {
                             try {
+                                 sh 'chmod 777 -R ./script-directory'
                                 sh './script-directory/script-three.sh'
                                 echo 'Script executado com sucesso...'
                             } catch (err) {

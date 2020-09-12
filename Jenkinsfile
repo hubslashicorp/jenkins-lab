@@ -17,7 +17,7 @@ pipeline {
                     retry(2) {
                         script {
                             try {
-                                sh 'chmod 777 -R script-directory && cd script-directory && ls -lha && script-one.sh'
+                                sh 'chmod 777 -R script-directory && cd script-directory && ls -lha && bash ./script-one.sh'
                                 echo 'Script executado com sucesso...'
                             }
                             catch (err) {

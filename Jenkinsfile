@@ -16,6 +16,7 @@ pipeline {
                     retry(2) {
                         script {
                             try {
+                                sh 'ls -lha'
                                 sh './script-directory/script-one.sh'
                                 echo 'Script executado com sucesso...'
                             }

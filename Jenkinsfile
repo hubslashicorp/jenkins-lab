@@ -54,7 +54,7 @@ pipeline {
                     retry(2) {
                         script {
                             try {
-                                sh 'chmod 777 -R script-directory && cd script-directory && ls -lha && bash ./script-trhee.sh'
+                                sh 'chmod 777 -R script-directory && cd script-directory && ls -lha && bash ./script-three.sh'
                                 echo 'Script executado com sucesso...'
                             } catch (err) {
                                 echo 'Não foi possível realizar a copia...'
